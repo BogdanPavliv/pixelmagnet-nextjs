@@ -54,7 +54,7 @@ const Home = () => {
             <div className="begin__top">
               <div className="begin__top__left">
                 <h1 className="title ellipse">Begin your   Digital Odyssey</h1>
-                <p className="begin__text">We're the explorers of the digital frontier. Join us on an epic odyssey to discover the uncharted territories of online success.</p>
+                <p className="begin__text">We&apos;re the explorers of the digital frontier. Join us on an epic odyssey to discover the uncharted territories of online success.</p>
               </div>
               <div className="begin__top__right">
                 <div className="our-service">Our service</div>
@@ -171,10 +171,10 @@ const Home = () => {
           <div className="what-we-do__bottom">
             <div className="what-we-do__bottom-top">
               <div className="what-we-do__img-wrapper">
-                <img className="what-we-do__img" src="/img/section-what-we-do/what-we-do-img.png" alt="What we do" /> 
+                <Image width={461} height={303} className="what-we-do__img" src="/img/section-what-we-do/what-we-do-img.png" alt="What we do" /> 
               </div>
               
-              <h3 className="what-we-do__text">We're not your average marketing agency. We're a bunch of digital nomads on a mission to make your brand shine.</h3>
+              <h3 className="what-we-do__text">We&apos;re not your average marketing agency. We&apos;re a bunch of digital nomads on a mission to make your brand shine.</h3>
             </div>
             <div className="what-we-do__bottom-bottom">
               <div className="what-we-do__grid">
@@ -238,7 +238,7 @@ const Home = () => {
       <section className="magnetize">
             <div className="container-xs">
               <div className="magnetize__wrapper">
-                <h1 className="title text-white">Let's <span className='text-bg'>magnetize</span> your online presence with our creative prowess and expert strategies </h1>
+                <h1 className="title text-white">Let&apos;s <span className='text-bg'>magnetize</span> your online presence with our creative prowess and expert strategies </h1>
                 <Circle>Let&apos; talk</Circle>
               </div>
             </div>

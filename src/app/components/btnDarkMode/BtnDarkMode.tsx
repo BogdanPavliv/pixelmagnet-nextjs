@@ -6,6 +6,8 @@ import { useLocalStorage } from './../../utils/useLocalStorage';
 import detectDarkMode from '../../utils/detectDarkMode';
 import "./BtnDarkMode.scss";
 
+import Image from 'next/image';
+
 const BtnDarkMode: React.FC = () => {
     const [darkMode, setDarkMode] = useLocalStorage<'dark' | 'light'>('darkMode', detectDarkMode());
     const [mounted, setMounted] = useState(false); // Стан для відстеження, чи компонент змонтований
@@ -46,8 +48,8 @@ const BtnDarkMode: React.FC = () => {
     // Показуємо компонент тільки після повного монтування
     return (
         <button className={mounted && darkMode === 'dark' ? btnActive : btnNormal} onClick={toggleDarkMode}>
-            <img src="/img/footer/sun.svg" alt="Light mode" className="dark-mode-btn__icon" />
-            <img src="/img/footer/moon.svg" alt="Dark mode" className="dark-mode-btn__icon" />
+            <Image width={16} height={16} src="/img/footer/sun.svg" alt="Light mode" className="dark-mode-btn__icon" />
+            <Image width={16} height={16} src="/img/footer/moon.svg" alt="Dark mode" className="dark-mode-btn__icon" />
         </button>
     );
 };

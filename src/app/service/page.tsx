@@ -452,8 +452,8 @@ const Service = (props: Props) => {
       <section className="magnetize">
             <div className="container-xs">
               <div className="magnetize__wrapper">
-                <h1 className="title text-white">Let's <span className='text-bg'>magnetize</span> your online presence with our creative prowess and expert strategies </h1>
-                <Circle>Let&apos; talk</Circle>
+                <h1 className="title text-white">Let&apos;s <span className='text-bg'>magnetize</span> your online presence with our creative prowess and expert strategies </h1>
+                <Circle>Let&apos;s talk</Circle>
               </div>
             </div>
       </section>

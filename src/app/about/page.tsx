@@ -102,7 +102,7 @@ const AboutPage = (props: Props) => {
                   <p className="who-we-are__text marginBottom">Our journey began with a simple idea: to make the digital world accessible and profitable for businesses of all sizes. Founded in [Year of Establishment], we set out to bridge the gap between creativity and strategy, between technology and human connection.
                   </p>
                   <p className="who-we-are__text">
-                   Over the years, we've grown from a small team with big dreams to a dynamic agency that's making waves in the industry.
+                   Over the years, we&apos;ve grown from a small team with big dreams to a dynamic agency that&apos;s making waves in the industry.
                   </p>
                 </div>
             </div>
@@ -128,7 +128,7 @@ const AboutPage = (props: Props) => {
                 </li>
                 <li className="who-we-are__item">
                   <h4 className="who-we-are__item--title">Continuous Learning</h4>
-                  <p className="who-we-are__text">In the dynamic world of digital, knowledge is power. We're committed to staying at the forefront of industry trends and technologies, so you can benefit from the latest innovations.
+                  <p className="who-we-are__text">In the dynamic world of digital, knowledge is power. We&apos;re committed to staying at the forefront of industry trends and technologies, so you can benefit from the latest innovations.
                   </p>
                 </li>
               </ul>
@@ -164,8 +164,8 @@ const AboutPage = (props: Props) => {
       <section className="magnetize">
             <div className="container-xs">
               <div className="magnetize__wrapper">
-                <h1 className="title text-white">Let's <span className='text-bg'>magnetize</span> your online presence with our creative prowess and expert strategies </h1>
-                <Circle>Let&apos; talk</Circle>
+                <h1 className="title text-white">Let&apos;s <span className='text-bg'>magnetize</span> your online presence with our creative prowess and expert strategies </h1>
+                <Circle>Let&apos;s talk</Circle>
               </div>
             </div>
       </section>

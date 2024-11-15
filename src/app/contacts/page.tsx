@@ -153,7 +153,7 @@ const ContactsPage = (props: Props) => {
                     <div className="get-in-touch__left">
                      <h3 className="tag">Get in touch</h3>
                      <h1 className="title ellipse">Ready to take your digital presence to the next level?</h1>
-                     <p className="get-in-touch__text">Whether you have questions, want to discuss your project, or simply want to say hello, we'd love to hear from you. Contact our team of experts today, and let's start crafting your digital success story.</p>
+                     <p className="get-in-touch__text">Whether you have questions, want to discuss your project, or simply want to say hello, we&apos;d love to hear from you. Contact our team of experts today, and let&apos;s start crafting your digital success story.</p>
                     </div>
                     <div className="get-in-touch__right">
                         <div className="get-in-touch__img--wrapper">

@@ -42,6 +42,25 @@ const ProjectsPage = () => {
     setInitialLoadDone(false);
   }, [filteredCategory]);
 
+  const loadMorePostsOnScroll = () => {
+    const additionalProjects = dataProjects.filter(project =>
+      filteredCategory === 'All' || project.category === filteredCategory
+    );
+
+    if (filteredProjects.length >= additionalProjects.length) {
+      setHasMore(false);
+      return;
+    }
+    setScrollLoading(true);
+    setTimeout(() => {
+      setFilteredProjects(prevProjects => [
+        ...prevProjects,
+        ...additionalProjects.slice(prevProjects.length, prevProjects.length + 3)
+      ]);
+      setScrollLoading(false);
+    }, 1500);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (loading || scrollLoading || !hasMore || !initialLoadDone) return; // Спрацьовує тільки після першого кліку
@@ -53,7 +72,7 @@ const ProjectsPage = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [loading, scrollLoading, hasMore, initialLoadDone]);
+  }, [loading, scrollLoading, hasMore, initialLoadDone, loadMorePostsOnScroll]);
 
   const loadMorePosts = () => {
     if (initialLoadDone) return; // Якщо вже був клік, ігноруємо наступні кліки
@@ -74,25 +93,6 @@ const ProjectsPage = () => {
         ...additionalProjects.slice(prevProjects.length, prevProjects.length + 3)
       ]);
       setLoading(false);
-    }, 1500);
-  };
-
-  const loadMorePostsOnScroll = () => {
-    const additionalProjects = dataProjects.filter(project =>
-      filteredCategory === 'All' || project.category === filteredCategory
-    );
-
-    if (filteredProjects.length >= additionalProjects.length) {
-      setHasMore(false);
-      return;
-    }
-    setScrollLoading(true);
-    setTimeout(() => {
-      setFilteredProjects(prevProjects => [
-        ...prevProjects,
-        ...additionalProjects.slice(prevProjects.length, prevProjects.length + 3)
-      ]);
-      setScrollLoading(false);
     }, 1500);
   };
 
@@ -154,7 +154,9 @@ const ProjectsPage = () => {
             {filteredProjects.map((project) => (
               <article key={project.id} className="project-item">
                 <Link href={`/project/${project.id}`} className="project-item__link-detail">
-                    <img
+                    <Image
+                      width={414}
+                      height={444}
                       className="project-item__img"
                       src={project.image}
                       alt={project.title}
@@ -180,7 +182,7 @@ const ProjectsPage = () => {
           )}
           {(loading || scrollLoading) && (
             <div className="loading_wrapper">
-              <img width={32} height={32} className={styles.loading} src="/img/section-posts/loading.gif" alt="" />
+              <Image width={32} height={32} className={styles.loading} src="/img/section-posts/loading.gif" alt="" />
             </div>
           )}
         </div>
@@ -188,8 +190,8 @@ const ProjectsPage = () => {
       <section className="magnetize">
             <div className="container-xs">
               <div className="magnetize__wrapper">
-                <h1 className="title text-white">Let's <span className='text-bg'>magnetize</span> your online presence with our creative prowess and expert strategies </h1>
-                <Circle>Let&apos; talk</Circle>
+                <h1 className="title text-white">Let&apos;s <span className='text-bg'>magnetize</span> your online presence with our creative prowess and expert strategies </h1>
+                <Circle>Let&apos;s talk</Circle>
               </div>
             </div>
       </section>

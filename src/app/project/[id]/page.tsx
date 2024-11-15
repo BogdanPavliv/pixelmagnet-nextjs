@@ -41,6 +41,8 @@ type Project = {
 const ProjectPage = ({ params }: { params: { id: string } }) => {
   // Плавний скрол
   useLenis();
+
+  // slider swiper
   
   const [currentSlide, setCurrentSlide] = useState(0);
   const swiperRef = useRef<any>(null);  // Використовується для доступу до Swiper instance
@@ -53,6 +55,8 @@ const ProjectPage = ({ params }: { params: { id: string } }) => {
       swiperRef.current.slideTo(value);
     }
   };
+
+  // slider swiper
 
   const testimonialsRef = useRef(null);
  
@@ -269,8 +273,8 @@ const ProjectPage = ({ params }: { params: { id: string } }) => {
         <section className="magnetize">
             <div className="container-xs">
               <div className="magnetize__wrapper">
-                <h1 className="title text-white">Let's <span className='text-bg'>magnetize</span> your online presence with our creative prowess and expert strategies </h1>
-                <Circle>Let&apos; talk</Circle>
+                <h1 className="title text-white">Let&apos;s <span className='text-bg'>magnetize</span> your online presence with our creative prowess and expert strategies </h1>
+                <Circle>Let&apos;s talk</Circle>
               </div>
             </div>
       </section>

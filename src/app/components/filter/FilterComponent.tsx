@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import Image from 'next/image';
+
 type Category = 'All' | 'Branding' | 'UX/UI Design' | 'App Development' | 'Web Development' | 'Digital Transformation';
 
 interface FilterComponentProps {
@@ -35,7 +37,7 @@ const FilterComponent: React.FC<FilterComponentProps> = ({ onFilterChange, categ
       {/* Випадаючий список для мобільних пристроїв */}
       <div className="filter-dropdown">
         <button className="dropdown-toggle" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
-          {selectedCategory} <img src="/img/arrow-down.svg" alt="" />
+          {selectedCategory} <Image width={16} height={16} src="/img/arrow-down.svg" alt="" />
         </button>
         {isDropdownOpen && (
           <div className="dropdown-menu">

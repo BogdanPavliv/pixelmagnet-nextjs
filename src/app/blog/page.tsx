@@ -27,6 +27,18 @@ const BlogPage: React.FC = () => {
   const [scrollLoading, setScrollLoading] = useState(false);
   const [loadMoreVisible, setLoadMoreVisible] = useState(true);
 
+  const loadMorePostsOnScroll = () => {
+    if (posts.length >= dataPosts.length) {
+      setHasMore(false);
+      return;
+    }
+    setScrollLoading(true);
+    setTimeout(() => {
+      setPosts(posts.concat(dataPosts.slice(posts.length, posts.length + 2)));
+      setScrollLoading(false);
+    }, 1500);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (loading || scrollLoading || loadMoreVisible) return;
@@ -38,7 +50,7 @@ const BlogPage: React.FC = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [loading, scrollLoading, loadMoreVisible]);
+  }, [loading, scrollLoading, loadMoreVisible, loadMorePostsOnScroll]);
 
   const loadMorePosts = () => {
     if (posts.length >= dataPosts.length) {
@@ -53,17 +65,7 @@ const BlogPage: React.FC = () => {
     }, 1500);
   };
 
-  const loadMorePostsOnScroll = () => {
-    if (posts.length >= dataPosts.length) {
-      setHasMore(false);
-      return;
-    }
-    setScrollLoading(true);
-    setTimeout(() => {
-      setPosts(posts.concat(dataPosts.slice(posts.length, posts.length + 2)));
-      setScrollLoading(false);
-    }, 1500);
-  };
+  
 
   const handleLoadMore = () => {
     loadMorePosts();
@@ -97,7 +99,7 @@ const BlogPage: React.FC = () => {
                       <div className="articleLarge__category">2023 - UX/UI & App Development</div>
                     </div>
                     <a className="articleLarge__link" href="#">
-                      <img className="articleLarge__link--img" src="/img/section-posts/arrow-right.svg" alt="" />
+                     <Image width={167} height={167} className="articleLarge__link--img" src="/img/section-posts/arrow-right.svg" alt="" />
                     </a>
                   </div>
                 </article>
@@ -112,7 +114,7 @@ const BlogPage: React.FC = () => {
               <div className="posts__large">
                 <article className="articleLarge">
                   <div className="articleLarge__img__wrapper">
-                    <img className="articleLarge__img" src="/img/section-posts/post-img-6.jpg" alt="" />
+                   <Image width={1290} height={572} src="/img/section-posts/post-img-6.jpg" alt="" />
                   </div>
                   <div className="articleLarge__content--wrapper">
                     <div className="articleLarge__content">
@@ -121,7 +123,7 @@ const BlogPage: React.FC = () => {
                       <div className="articleLarge__category">2023 - UX/UI & App Development</div>
                     </div>
                     <a className="articleLarge__link" href="#">
-                      <img className="articleLarge__link--img" src="/img/section-posts/arrow-right.svg" alt="" />
+                      <Image width={167} height={167} className="articleLarge__link--img" src="/img/section-posts/arrow-right.svg" alt="" />
                     </a>
                   </div>
                 </article>
@@ -155,8 +157,8 @@ const BlogPage: React.FC = () => {
       <section className="magnetize">
             <div className="container-xs">
               <div className="magnetize__wrapper">
-                <h1 className="title text-white">Let's <span className='text-bg'>magnetize</span> your online presence with our creative prowess and expert strategies </h1>
-                <Circle>Let&apos; talk</Circle>
+                <h1 className="title text-white">Let&apos;s <span className='text-bg'>magnetize</span> your online presence with our creative prowess and expert strategies </h1>
+                <Circle>Let&apos;s talk</Circle>
               </div>
             </div>
       </section>

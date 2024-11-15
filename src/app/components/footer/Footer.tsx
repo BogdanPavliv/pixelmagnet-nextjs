@@ -3,7 +3,9 @@ import React from 'react';
 import BtnDarkMode from '../btnDarkMode/BtnDarkMode';
 import "./footer.scss";
 import FooterLinks from "./links/FooterLinks";
-import SocialLinks from "./socialLinks/SocialLinks"
+import SocialLinks from "./socialLinks/SocialLinks";
+
+import Image from 'next/image';
 
 const Footer: React.FC = () => {
     return (
@@ -13,7 +15,7 @@ const Footer: React.FC = () => {
                     <div className="footer__top">
                         <div className="footer__top-left">
                             <div className="footer__top-left-top">
-                                <img className='footer_logo__img' src='/img/logo-white.svg' alt='logo' />
+                                <Image width={232} height={24} className='footer_logo__img' src='/img/logo-white.svg' alt='logo' />
                             </div>
                             <div className="footer__top-left-bottom">
                                 <div className="footer__top-left-bottom-left">

@@ -19,11 +19,6 @@ const ArticlePage = ({ params }: { params: { id: string } }) => {
   // Плавний скрол
   useLenis();
 
-  const postId = parseInt(params.id, 10);
-  const post = dataPosts.find(p => p.id === postId);
-
-  if (!post) return <p>Post not found</p>;
-
   // slider swiper
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -37,7 +32,14 @@ const ArticlePage = ({ params }: { params: { id: string } }) => {
       swiperRef.current.slideTo(value);
     }
   };
-  
+
+  // 
+
+  const postId = parseInt(params.id, 10);
+  const post = dataPosts.find(p => p.id === postId);
+
+  if (!post) return <p>Post not found</p>;
+
   return (
     <div className='main'>
       <section className="article-heading">
@@ -76,7 +78,7 @@ const ArticlePage = ({ params }: { params: { id: string } }) => {
             </div>
             <div className="article-heading__bottom">
               <div className="article-heading__bottom--img-wrapper">
-                <img className="article-heading__bottom--img" src={post.images.image} alt="" />
+                <Image width={1290} height={572} className="article-heading__bottom--img" src={post.images.image} alt="" />
               </div>
             </div>
           </div>
@@ -86,7 +88,7 @@ const ArticlePage = ({ params }: { params: { id: string } }) => {
         <div className="container-sm">
           <div className="article-detail__inner">
             <p className="article-detail__text">
-              In the ever-evolving landscape of digital creativity, there's a new star on the horizon, poised to revolutionize how designers, artists, and creatives showcase their work to the world. If you've been following the creative scene, you've likely heard of Dribbble, the platform that has long been a go-to for professionals and enthusiasts to share their design projects, gain inspiration, and connect with fellow creatives. But now, there's a brand-new player in town, and it's bringing fresh features and possibilities to the table.
+              In the ever-evolving landscape of digital creativity, there&apos;s a new star on the horizon, poised to revolutionize how designers, artists, and creatives showcase their work to the world. If you&apos;ve been following the creative scene, you&apos;ve likely heard of Dribbble, the platform that has long been a go-to for professionals and enthusiasts to share their design projects, gain inspiration, and connect with fellow creatives. But now, there&apos;s a brand-new player in town, and it&apos;s bringing fresh features and possibilities to the table.
             </p>
             <h4 className="article-detail__title">
               Introducing the New Kid on the Block
@@ -110,28 +112,28 @@ const ArticlePage = ({ params }: { params: { id: string } }) => {
               3. Seamless Collaboration
             </h4>
             <p className="article-detail__text">
-              While Dribbble has mainly been a showcase platform, this new contender encourages collaboration. Creatives can form teams, join forces on projects, and even offer their services for freelance opportunities. It's not just about showcasing work; it's about facilitating connections and collaboration within the creative community.
+              While Dribbble has mainly been a showcase platform, this new contender encourages collaboration. Creatives can form teams, join forces on projects, and even offer their services for freelance opportunities. It&apos;s not just about showcasing work; it&apos;s about facilitating connections and collaboration within the creative community.
             </p>
             <h4 className="article-detail__title">
               4. Learning and Resources
             </h4>
             <p className="article-detail__text">
-              Beyond portfolios, this platform is also becoming a valuable resource hub for creatives. Users can share design resources, tutorials, and insights, making it a one-stop-shop for both showcasing work and expanding one's creative knowledge.
+              Beyond portfolios, this platform is also becoming a valuable resource hub for creatives. Users can share design resources, tutorials, and insights, making it a one-stop-shop for both showcasing work and expanding one&apos;s creative knowledge.
             </p>
             <h4 className="article-detail__title">
               5. Enhanced Discoverability
             </h4>
             <p className="article-detail__text">
-              The platform utilizes advanced algorithms to suggest relevant content to users. This means that as a creative, you're more likely to discover projects and talents that resonate with your interests. It's a fantastic way to keep the inspiration flowing.
+              The platform utilizes advanced algorithms to suggest relevant content to users. This means that as a creative, you&apos;re more likely to discover projects and talents that resonate with your interests. It&apos;s a fantastic way to keep the inspiration flowing.
             </p>
             <h4 className="article-detail__title">
               Looking Ahead
             </h4>
             <p className="article-detail__text">
-              While this new platform is gaining traction and excitement, it's still in its early stages. Much like Dribbble, it will evolve over time as it responds to the needs and feedback of its user base. But its commitment to inclusivity, collaboration, and comprehensive project presentation is a promising sign that it will continue to reshape the digital portfolio landscape.
+              While this new platform is gaining traction and excitement, it&apos;s still in its early stages. Much like Dribbble, it will evolve over time as it responds to the needs and feedback of its user base. But its commitment to inclusivity, collaboration, and comprehensive project presentation is a promising sign that it will continue to reshape the digital portfolio landscape.
             </p>
             <p className="article-detail__text">
-              In conclusion, the arrival of a brand-new portfolio platform, with a fresh take on creativity and collaboration, is an exciting development for the design and creative community. As it gains momentum, it's worth keeping an eye on how this platform will shape the future of digital creativity and portfolio sharing, possibly giving established players like Dribbble a run for their money. So, if you're a creative looking for a new space to showcase your work and connect with like-minded individuals, the future looks bright with this innovative newcomer on the scene.
+              In conclusion, the arrival of a brand-new portfolio platform, with a fresh take on creativity and collaboration, is an exciting development for the design and creative community. As it gains momentum, it&apos;s worth keeping an eye on how this platform will shape the future of digital creativity and portfolio sharing, possibly giving established players like Dribbble a run for their money. So, if you&apos;re a creative looking for a new space to showcase your work and connect with like-minded individuals, the future looks bright with this innovative newcomer on the scene.
             </p>
           </div>
         </div>
@@ -158,8 +160,7 @@ const ArticlePage = ({ params }: { params: { id: string } }) => {
                     <SwiperSlide key={i} className="related__slide--wrapper">
                       <div className="related__slide">
                         <div className="related__slide--img-wrapper">
-                        <img className="related__slide--img" src={item.image} alt={item.title} />
-                        
+                         <Image width={628} height={572} className="related__slide--img" src={item.image} alt={item.title} />
                         </div>
                         <h3 className="related__slide--title">{item.title}</h3>
                         <p className="related__slide--text">{item.text}</p>
@@ -187,8 +188,8 @@ const ArticlePage = ({ params }: { params: { id: string } }) => {
       <section className="magnetize">
             <div className="container-xs">
               <div className="magnetize__wrapper">
-                <h1 className="title text-white">Let's <span className='text-bg'>magnetize</span> your online presence with our creative prowess and expert strategies </h1>
-                <Circle>Let&apos; talk</Circle>
+                <h1 className="title text-white">Let&apos;s <span className='text-bg'>magnetize</span> your online presence with our creative prowess and expert strategies </h1>
+                <Circle>Let&apos;s talk</Circle>
               </div>
             </div>
       </section>
