@@ -5,7 +5,7 @@ import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 import Image from 'next/image';
 
-import {useLenis} from "../../hooks/useLenis";
+import {useLenis} from "../hooks/useLenis";
 
 type Props = {}
 

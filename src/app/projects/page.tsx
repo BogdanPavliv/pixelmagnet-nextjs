@@ -5,7 +5,7 @@ import styles from "./projects.module.scss";
 import Link from 'next/link';
 import Image from 'next/image';
 
-import {useLenis} from "../../hooks/useLenis";
+import {useLenis} from "../hooks/useLenis";
 
 import FilterComponent from '../components/filter/FilterComponent';
 import { dataProjects } from "../utils/data";
@@ -189,7 +189,7 @@ const ProjectsPage = () => {
             <div className="container-xs">
               <div className="magnetize__wrapper">
                 <h1 className="title text-white">Let's <span className='text-bg'>magnetize</span> your online presence with our creative prowess and expert strategies </h1>
-                <Circle>Let's talk</Circle>
+                <Circle>Let&apos; talk</Circle>
               </div>
             </div>
       </section>

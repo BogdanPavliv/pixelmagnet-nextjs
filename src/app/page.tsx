@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import Image from "next/image";
 
-import {useLenis} from "../hooks/useLenis";
+import {useLenis} from "./hooks/useLenis";
 
 import Circle from './components/UI/Circle';
 import Promo from "./components/promo/Promo";
@@ -13,7 +13,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import 'swiper/css/pagination';
 
@@ -239,7 +239,7 @@ const Home = () => {
             <div className="container-xs">
               <div className="magnetize__wrapper">
                 <h1 className="title text-white">Let's <span className='text-bg'>magnetize</span> your online presence with our creative prowess and expert strategies </h1>
-                <Circle>Let's talk</Circle>
+                <Circle>Let&apos; talk</Circle>
               </div>
             </div>
       </section>
