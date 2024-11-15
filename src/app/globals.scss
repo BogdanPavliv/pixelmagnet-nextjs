@@ -5645,7 +5645,7 @@ body.dark .action__button--menu-image {
 
   &__slide--img-wrapper {
     position: relative;
-    margin-bottom: 42px;
+    margin-bottom: 24px;
 
     .promo {
       position: absolute;
@@ -5709,17 +5709,6 @@ body.dark .action__button--menu-image {
     line-height: 26px;
   }
 
-  .related__slide--title {
-    font-size: 16px;
-    line-height: 23px;
-    margin-bottom: 12px;
-  }
-
-  .related__slide--text {
-    font-size: 14px;
-    line-height: 21px;
-  }
-
   .articles-related__slider--wrapper {
     margin-bottom: 36px;
   }
@@ -5772,6 +5761,16 @@ body.dark .action__button--menu-image {
   .articles-related .title {
     font-size: 50px;
     line-height: 56px;
+  }
+  .related__slide--title {
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 12px;
+  }
+
+  .related__slide--text {
+    font-size: 14px;
+    line-height: 21px;
   }
 }
 
