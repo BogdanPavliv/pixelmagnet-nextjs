@@ -1151,7 +1151,7 @@ body.dark .action__button--menu-image {
     font-size: 24px;
     line-height: 28.8px;
     text-align: center;
-    color: #222222;
+    color: var(--title-1);
     margin-bottom: 42px;
   }
 
@@ -4583,7 +4583,7 @@ body.dark .action__button--menu-image {
     font-weight: 400;
     font-size: 32px;
     line-height: 44.8px;
-    color: #555555;
+    color: var(--text-color);
   }
 
   &__bottom--img-wrapper {
@@ -5669,6 +5669,7 @@ body.dark .action__button--menu-image {
 
   &__slide--img {
     width: 100%;
+    border-radius: 24px;
   }
 
   &__slide--title {
@@ -5806,6 +5807,7 @@ body.dark .action__button--menu-image {
 
   &__img {
     width: 100%;
+    border-radius: 24px;
   }
 
   &__title {
@@ -5855,6 +5857,10 @@ body.dark .action__button--menu-image {
 @media (max-width: 540px) {
   .article__img__wrapper {
     max-width: 90px;
+    border-radius: 16px;
+  }
+
+  .article__img {
     border-radius: 16px;
   }
 
