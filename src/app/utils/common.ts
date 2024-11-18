@@ -40,7 +40,11 @@ export const sliderBrandsSettings = {
   infinite: true,
   centerPadding: "0px",
   slidesToShow: 5.5,
-  speed: 500,
+  autoplay: true,
+  speed: 10000,
+  autoplaySpeed: 10000,
+  cssEase: "linear",
+
   responsive: [
     {
       breakpoint: 992,
